@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title"></title>
+    <!-- CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.4/confetti.js"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!-- Icon -->
+    <link rel="Icon" data-img="favicon" type="images/png">
+</head>
+<body>
+    <div class="hearts"></div>
+    <audio id="startAudio" src="assets/audio/start.mp3"></audio>
+    <div class="start-overlay" id="startOverlay">
+        <p>Chạm để bắt đầu 💕</p>
+    </div>
+    <div class="container">
+        <!-- Step 1 -->
+        <div class="step active" id="step1">
+            <img data-img="step1.bearImg" data-i18n-alt="step1.bearAlt" alt="" class="bear-img">
+            <h1 data-i18n="step1.heading"></h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep2()" data-i18n="step1.yesButton"></button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)" data-i18n="step1.noButton"></button>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <img data-img="step2.bearImg" data-i18n-alt="step2.bearAlt" alt="" class="bear-img">
+            <h1 data-i18n="step2.heading"></h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep3()" data-i18n="step2.yesButton"></button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)" data-i18n="step2.noButton"></button>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <img data-img="step3.bearImg" data-i18n-alt="step3.bearAlt" alt="" class="bear-img">
+            <h1 data-i18n="step3.heading"></h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="finalStep()" data-i18n="step3.yesButton"></button>
+            </div>
+        </div>
+
+        <!-- Final Message -->
+        <div class="final-message">
+            <div class="bear-row">
+                <img id="finalBearImg" data-img="finalMessage.bearImg" data-i18n-alt="finalMessage.bearAlt" alt="" class="bear-img">
+                <div class="corner-wrap">
+                    <div class="lyrics-frame" id="lyricsFrame"></div>
+                    <img src="assets/images/6.gif" alt="Cute Bear" class="bear-img-corner">
+                </div>
+            </div>
+            <p data-i18n="finalMessage.message"></p>
+            <p style="margin-top: 15px;" data-i18n="finalMessage.subMessage"></p>
+            <audio id="finalAudio" src="assets/audio/phonecert.mp3"></audio>
+        </div>
+
+        <a data-link="finalMessage.chatLink" class="chat-btn" target="_blank" data-i18n="finalMessage.chatButton"></a>
+    </div>
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
